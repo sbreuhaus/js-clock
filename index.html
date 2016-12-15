@@ -58,10 +58,10 @@
     const hourHand = document.querySelector('.hand-hr');
 
       function setDate(){
-        const now = new Date();
-        const seconds = now.getSeconds();
-        const secondsDegrees = ((seconds/60) * 360 + 90 );
-        secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+        const now = new Date(); //create new date object
+        const seconds = now.getSeconds(); //extract seconds
+        const secondsDegrees = ((seconds/60) * 360 + 90 ); //calculate degree of hand
+        secondHand.style.transform = `rotate(${secondsDegrees}deg)`;//inject into styles
         console.log(seconds);
 
         const minutes = now.getMinutes();
